@@ -1,0 +1,26 @@
+body{
+    background: #dedede no-repeat 50% -200px;
+    font: normal normal normal 0.85em/1.7em Verdana, Arial, Geneva, Helvetica, sans-serif;
+    color: #1E1E1E;
+    margin-top:0px;
+}
+.main-container{
+    background: url(header.png) no-repeat 50% 0%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding-top: 304px;
+    margin-bottom: 0px;
+    width: 800px;
+}
+.main-flash{
+    background: #yellow;
+}
+.main-content{
+    padding-top: 0px;
+    background: white;
+    padding: 13px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+

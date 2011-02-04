@@ -1,0 +1,13 @@
+this is a test site to show how to connect to salesforce
+
+deployed at: http://salesforce.pydra.com
+
+this could be a nice lead collection site for your marketing department or a better case entry screen for support customers
+
+---
+
+update the settings.py file with your salesforce credentials and this should be ready to push to pydra
+
+the company logo was snagged from the examples page at The Logo Factory:
+http://www.thelogofactory.com/logo-design-examples.php
+

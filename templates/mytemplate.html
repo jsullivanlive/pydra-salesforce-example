@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>My Marketing Site</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" media="all" />
+    </head>
+    <body>
+        <div class="main-container">
+            {% if get_flashed_messages() %}
+                <div class="main-flash">
+                    {% for category, msg in get_flashed_messages(with_categories=true) %}
+                      <p class=flash-{{ category }}>{{ msg }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="main-content">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+        
+        <!-- put your google analytics tracking code here -->
+        
+    </body>
+</html>

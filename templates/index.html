@@ -1,0 +1,19 @@
+{% extends "mytemplate.html" %}
+{% block body %}
+    
+    <h3>Here are other companies that have expressed interest in us:</h3>
+    <ul>
+    {% for company in companies %}
+        <li>{{ company }}</li>
+    {% endfor %}
+    </ul>
+    
+    <h3>Inquire here!</h3>
+    <form method="POST">
+        {{ form.csrf }}
+        {{ form.firstname.label }}: {{ form.firstname(size=30) }} <br/>
+        {{ form.lastname.label }}: {{ form.lastname(size=30) }} <br/>
+        {{ form.company.label }}: {{ form.company(size=30) }} <br/>
+        <input type="submit" value="Submit Inquiry">
+    </form>
+{% endblock %}
