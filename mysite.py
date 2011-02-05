@@ -5,8 +5,6 @@ from flaskext.wtf import Form, TextField, HiddenField, Required
 from sforce.partner import SforcePartnerClient
 from settings import *
 
-import pprint
-
 app = Flask(__name__)
 app.secret_key = 'make something long and complicated here - orange!'
 
@@ -30,7 +28,6 @@ def hello_world():
         lead.LastName = form.lastname.data
         lead.Company = form.company.data
         result = h.create(lead)
-        pprint.pprint(result)
         if result.success:
             return redirect(url_for("thank_you"))
     result = h.query('SELECT Company FROM Lead limit 10')
