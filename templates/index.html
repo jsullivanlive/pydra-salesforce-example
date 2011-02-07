@@ -11,9 +11,9 @@
     <h3>Inquire here!</h3>
     <form method="POST">
         {{ form.csrf }}
-        {{ form.firstname.label }}: {{ form.firstname(size=30) }} <br/>
-        {{ form.lastname.label }}: {{ form.lastname(size=30) }} <br/>
-        {{ form.company.label }}: {{ form.company(size=30) }} <br/>
+        {{ form.firstname.label }}: {{ form.firstname(size=30) }} {% if form.firstname.errors %}required!{% endif %} <br/>
+        {{ form.lastname.label }}: {{ form.lastname(size=30) }} {% if form.lastname.errors %}required!{% endif %} <br/>
+        {{ form.company.label }}: {{ form.company(size=30) }} {% if form.company.errors %}required!{% endif %} <br/>
         <input type="submit" value="Submit Inquiry">
     </form>
 {% endblock %}
